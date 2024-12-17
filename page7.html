@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 PAGE7 Winter Concert 1</title>
+    <style>
+        /* 기본 스타일 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a2e; /* 어두운 남색 배경 */
+            color: #e0eaff; /* 부드러운 흰색 텍스트 */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #16213e; /* 짙은 파란색 */
+            border-bottom: 2px solid #1f4068;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #ffcc00; /* 강렬한 노란색 */
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .info p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+        .setlist {
+            margin-top: 30px;
+        }
+        .team {
+            margin-bottom: 20px;
+        }
+        .team h3 {
+            font-size: 1.5em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        .team ul {
+            list-style: none;
+            padding: 0;
+        }
+        .team li {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #16213e;
+            border-top: 2px solid #1f4068;
+            margin-top: 20px;
+        }
+        footer p {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        /* 눈 내리는 효과 */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            left: 50%;
+            color: #e0eaff; /* 눈 색상 */
+            font-size: 1.5em;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* 눈 크기와 속도 조정 */
+        .snowflake:nth-child(odd) {
+            font-size: 1.8em;
+            animation-duration: 10s;
+        }
+        .snowflake:nth-child(even) {
+            font-size: 1.2em;
+            animation-duration: 15s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>2025 PAGE7 Winter Concert 1</h1>
+    </header>
+    <div class="container">
+        <div class="info">
+            <p><strong>Showtime:</strong> 2025.01.09 (Thu) at 18:30</p>
+            <p><strong>Venue:</strong> 클럽 FF (서울시 마포구 와우산로17길 12)</p>
+        </div>
+        <div class="setlist">
+            <h2>🎵 Setlist 🎵</h2>
+            <div class="team">
+                <h3>30기 8팀</h3>
+                <ul>
+                    <li>Follow you - 검정치마</li>
+                    <li>민수는 혼란스럽다 - 민수</li>
+                    <li>쥬베닐 - 정우</li>
+                </ul>
+            </div>
+            <div class="team">
+                <h3>30기 7팀</h3>
+                <ul>
+                    <li>항해 - 유다빈밴드</li>
+                    <li>tell em boys - 더 발룬티어스</li>
+                    <li>summer - 더 발룬티어스</li>
+                </ul>
+            </div>
+            <div class="team">
+                <h3>31기 5팀</h3>
+                <ul>
+                    <li>태양물고기 - 윤하</li>
+                    <li>러브홀릭 - 러브홀릭</li>
+                    <li>All I Want for Christmas is You - Mariah Carey</li>
+                </ul>
+            </div>
+            <div class="team">
+                <h3>30기 4팀</h3>
+                <ul>
+                    <li>Black storms - Rose</li>
+                    <li>Sex Pistols - Anarchy in the U.K</li>
+                    <li>Sex Pistols - God Save the Queen</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 세종대학교 중앙 락밴드 동아리 PAGE7.</p>
+    </footer>
+
+    <!-- 눈 내리는 효과 추가 -->
+    <script>
+        const snowflakeSymbols = ['❄', '✻', '✽', '❅'];
+        for (let i = 0; i < 50; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(snowflake);
+        }
+    </script>
+</body>
+</html>
